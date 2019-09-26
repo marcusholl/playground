@@ -5,5 +5,10 @@ node() {
       deleteDir()
       checkout scm
       setupCommonPipelineEnvironment script: this    
+
+      def target = commonPipelineEnvironment.configuration.steps.mtaBuild.buildTarget
+
+      echo "TARGET: ${target}"
+
     }
 }
