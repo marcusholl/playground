@@ -1,0 +1,9 @@
+#Steps Specific Configuration
+steps:
+  mtaBuild:
+    buildTarget: 'NEO'
+  neoDeploy:
+    neoCredentialsId: 'NEO_DEPLOY'
+    account: '123456'
+  transportRequestUploadFile:
+    applicationId: 'HCP'
