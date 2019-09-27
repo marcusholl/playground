@@ -1,4 +1,4 @@
-@Library('piper-lib-os@eb57c8df7b9a4b7a9f44ae57f5054303a0c9f74e') _
+@Library('piper-lib-os@experimental') _
 
 node() {
     stage("a") {
