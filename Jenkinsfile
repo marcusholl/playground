@@ -6,7 +6,7 @@ node() {
       checkout scm
         
         
-      def branch = env.BRANCH_NAME
+      def branch = null
         
       String landscape = 'landscape.yml'
       if(branch in ['develop', 'quality', 'master']) {
