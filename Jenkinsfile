@@ -4,6 +4,17 @@ node() {
     stage("a") {
       deleteDir()
       checkout scm
+        
+        
+      def branch = env.BRANCH_NAME
+        
+      String landscape = 'landscape.yml'
+      if(branch in ['develop', 'quality', 'master']) {
+          landscape = "landscape-${branch}.yml"
+      }
+        
+      echo "LANDSCAPE: ${landscape}"
+        
       setupCommonPipelineEnvironment script: this    
 
       def target = commonPipelineEnvironment.configuration.steps.mtaBuild.buildTarget
