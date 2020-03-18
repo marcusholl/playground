@@ -4,7 +4,7 @@ node() {
      stage('xx') {
          try {
 
-           piperPipelineStageInit script: this, buildtool: 'maven'           
+           piperPipelineStageInit script: this, buildTool: 'maven'           
          } catch(Throwable thr) {
              
              StringWriter sw = new StringWriter()
