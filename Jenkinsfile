@@ -1,25 +1,18 @@
-@Library('piper-lib-os@experimental') _
+@Library('piper-lib-os@marcusholl/troubleshoot2CPE') _
 
 node() {
-    stage("a") {
-      deleteDir()
-      checkout scm
-        
-        
-      def branch = null
-        
-      String landscape = 'landscape.yml'
-      if(branch in ['develop', 'quality', 'master']) {
-          landscape = "landscape-${branch}.yml"
-      }
-        
-      echo "LANDSCAPE: ${landscape}"
-        
-      setupCommonPipelineEnvironment script: this    
+     stage('xx') {
+         try {
 
-      def target = commonPipelineEnvironment.configuration.steps.mtaBuild.buildTarget
-
-      echo "TARGET: ${target}"
-
-    }
-}
+           piperPipelineStageInit script: this             
+         } catch(Throwable thr) {
+             
+             StringWriter sw = new StringWriter()
+             PrintWriter pw = new PrintWriter(sw)
+ 
+             thr.printStackTrace(pw)
+             echo "CAUGHT: ${sw}"
+             throw thr
+         }
+     }
+ }
