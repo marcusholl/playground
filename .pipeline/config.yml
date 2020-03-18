@@ -1,4 +1,6 @@
 #Steps Specific Configuration
+general:
+  buildTool: 'maven'
 steps:
   mtaBuild:
     buildTarget: 'NEO'
