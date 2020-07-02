@@ -9,4 +9,5 @@ curl -L --output piper https://github.com/SAP/jenkins-library/releases/download/
 chmod +x piper
 ls -lah
 ./piper version
+./piper mtaBuild
 echo "... done"
