@@ -20,5 +20,5 @@ curl --output ${METADATA_DIR}/mtaBuild.yaml https://raw.githubusercontent.com/SA
 ./piper getConfig --contextConfig # --stepMetadata "${METADATA_DIR}/mtaBuild.yaml"
 ./piper mtaBuild
 
-docker run -v `pwd`:/work ppiper/cf-cli /work/piper --version 
+docker run -v `pwd`:/work ppiper/cf-cli /work/piper version 
 echo "... done"
