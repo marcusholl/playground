@@ -22,4 +22,5 @@ curl --output ${METADATA_DIR}/mtaBuild.yaml https://raw.githubusercontent.com/SA
 ./piper mtaBuild
 
 docker run -v `pwd`:/work ppiper/cf-cli /work/piper version 
+docker run -v `pwd`:/work ppiper/cf-cli /work/piper cloudFoundryDeploy 
 echo "... done"
