@@ -1,0 +1,17 @@
+@Library('piper-lib-os@wip/go') _
+
+node() {
+
+    stage('init') {
+        deleteDir()
+        checkout scm
+        setupCommonPipelineEnvironment script: this
+    }
+
+    stage('go') {
+
+        dockerExecuteOnKubernetes(script: this, dockerImage: 'docker.wdf.sap.corp:51006/piper/mta-go') {
+            mtaBuildGo script: this
+        }
+    }
+}
