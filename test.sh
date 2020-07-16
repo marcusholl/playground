@@ -16,4 +16,7 @@ id
 ls -la
 ls -lan
 
+# Only troubleshooting, we can't do this in the free wild
+chmod -R 777 .
+
 docker run -v `pwd`:/project devxci/mbtci /project/piper mtaBuild
