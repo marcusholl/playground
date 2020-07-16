@@ -14,5 +14,6 @@ curl --output ${METADATA_DIR}/mtaBuild.yaml https://raw.githubusercontent.com/SA
 
 
 ls -la
+ls -lan
 
 docker run -v `pwd`:/project devxci/mbtci /project/piper mtaBuild
