@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Dummy is"
+echo $dummy
+echo "========"
+
 docker --version
 
 #curl -L --output piper https://github.com/SAP/jenkins-library/releases/download/v1.50.0/piper
@@ -16,4 +20,5 @@ chmod -R 777 .
 
 docker run -v `pwd`:/project devxci/mbtci /project/piper mtaBuild
 
-docker run -v `pwd`:/project ppiper/cf-cli /project/piper cloudFoundryDeploy
+docker run -v `pwd`:/project ppiper/cf-cli /project/piper cloudFoundryDeploy "apiEndpoint", "deployTool", "org", "password", "space", "username" not set
+
