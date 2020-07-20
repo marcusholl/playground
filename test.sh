@@ -15,3 +15,5 @@ ls -lan
 chmod -R 777 .
 
 docker run -v `pwd`:/project devxci/mbtci /project/piper mtaBuild
+
+docker run -v `pwd`:/project ppiper/cf-cli /project/piper cloudFoundryDeploy
