@@ -3,6 +3,12 @@
 echo "Dummy is"
 echo $dummy
 echo "========"
+echo "MyDummy is"
+echo $myDummy
+echo "========"
+echo "MySecretDummy is"
+echo $mySecretDummy
+echo "========"
 
 docker --version
 
