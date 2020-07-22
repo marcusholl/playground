@@ -1,13 +1,13 @@
 #!/bin/bash
 
 echo "Dummy is"
-echo $dummy
+echo ${DUMMY}
 echo "========"
 echo "MyDummy is"
-echo $myDummy
+echo ${MYDUMMY}
 echo "========"
 echo "MySecretDummy is"
-echo $mySecretDummy
+echo ${MYSECRETDUMMY}
 echo "========"
 
 echo "ENV"
