@@ -2,12 +2,15 @@
 
 echo "Dummy is"
 echo ${DUMMY}
+echo $(dummy)
 echo "========"
 echo "MyDummy is"
 echo ${MYDUMMY}
+echo $(myDummy)
 echo "========"
 echo "MySecretDummy is"
 echo ${MYSECRETDUMMY}
+echo $(mySecretDummy)
 echo "========"
 
 echo "ENV"
