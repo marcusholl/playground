@@ -3,7 +3,7 @@
 node() {
     stage('setup') {
         setupCommonPipelineEnvironment script: this
-        script 'echo "hello world" > test.txt'
+        sh 'echo "hello world" > test.txt'
     }
     stage('malewarescan') {
 
