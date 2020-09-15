@@ -7,6 +7,6 @@ node() {
     }
     stage('malewarescan') {
 
-        malwareExecuteScan script: this, file: 'test.txt', malwareScanCredentialsId: 'malwareScan'
+        malwareExecuteScan script: this, file: 'test.txt', malwareScanCredentialsId: 'malwarescan'
     }
 }
