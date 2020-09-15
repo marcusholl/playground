@@ -7,6 +7,6 @@ node() {
     }
     stage('malewarescan') {
 
-        malwareExecuteScan script: this, file: 'test.txt', malwareScanCredentialsId: 'malwarescan'
+        malwareExecuteScan script: this, file: 'test.txt', host: 'https://malware-scanner.cf.sap.hana.ondemand.com' , malwareScanCredentialsId: 'malwarescan'
     }
 }
