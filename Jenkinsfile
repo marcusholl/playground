@@ -5,7 +5,7 @@ node() {
       
       def scminfo = checkout scm
 
-      echo "[MH] scminfo: ${scmInfo}"
+      echo "[MH] scminfo: ${scminfo}"
 
   }
 }
