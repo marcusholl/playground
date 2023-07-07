@@ -5,7 +5,10 @@ node() {
 
   stage('prepare') {
 
-      checkout scm
+      
+      def scminfo = checkout scm
+
+      echo "[MH] scminfo: ${scmInfo}"
 
       setupCommonPipelineEnvironment script:this, customDefaults: 'landscape.yml'
 
